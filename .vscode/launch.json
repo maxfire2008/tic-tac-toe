@@ -1,0 +1,14 @@
+{
+    "name": "Build and Run",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "${workspaceFolder}/build/${workspaceFolderBasename}",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [],
+    "externalConsole": true,
+    "MIMode": "lldb",
+    "preLaunchTask": "Build",
+    "postDebugTask": "Run"
+}

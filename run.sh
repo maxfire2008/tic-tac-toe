@@ -1,3 +1,3 @@
 #!/bin/sh
-gcc ttt.c
+gcc ttt.c -o build/ttt
 ./build/ttt
