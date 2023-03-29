@@ -67,14 +67,7 @@ int main() {
         // if board[move_Y][move_X] == " ":
         if (board[move_Y][move_X] == 32) {
 //             board[move_Y][move_X] = current_move
-            // char old_row[3];
-            // strcpy(old_row, board[move_Y]);
-            // printf("%s", old_row);
-            strcpy(&board[move_Y][move_X], current_move);
-            char extra_space;
-            for (extra_space = 1-move_X; extra_space >= 0; --extra_space) {
-                strcat(&board[move_Y], " ");
-            }
+            board[move_Y][move_X] = *current_move;
 //             if current_move == "X":
             if (current_move == "X") {
 //                 current_move = "Y"
