@@ -7,21 +7,22 @@ void board_render(char board[3][4], char *board_ascii) {
     memset(board_ascii, 0, 18);
 //     board_ascii = ""
 //     board_ascii += "a "
-    strcat(board_ascii, "a ");
+    strcat(board_ascii, "  123\n");
+    strcat(board_ascii, "a|");
 //     board_ascii += ''.join(board[0])
     char *row_a = &board[0][0];
     strcat(board_ascii, row_a);
 //     board_ascii += "\nb "
-    strcat(board_ascii, "'\nb ");
+    strcat(board_ascii, "\nb|");
 //     board_ascii += ''.join(board[1])
     char *row_b = &board[1][0];
     strcat(board_ascii, row_b);
 //     board_ascii += "\nc "
-    strcat(board_ascii, "'\nc ");
+    strcat(board_ascii, "\nc|");
 //     board_ascii += ''.join(board[2])
     char *row_c = &board[2][0];
     strcat(board_ascii, row_c);
-    strcat(board_ascii, "'");
+    // strcat(board_ascii, "");
 //     return board_ascii
 }
 
@@ -44,7 +45,7 @@ int main() {
 //     while 1:
     while (1) {
 //         board_ascii = board_render(board)
-        char board_ascii[18];
+        char board_ascii[32];
         board_render(board, board_ascii);
 //         print(board_ascii)
         printf("%s\n\n", board_ascii);
