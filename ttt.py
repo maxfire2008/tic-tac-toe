@@ -27,10 +27,14 @@ def main():
         move_X = ord(move[1])-49
         print("Y:", move_Y)
         print("X:", move_X)
-        if current_move == "X":
-            current_move = "Y"
+        if board[move_Y][move_X] == " ":
+            board[move_Y][move_X] = current_move
+            if current_move == "X":
+                current_move = "Y"
+            else:
+                current_move = "X"
         else:
-            current_move = "X"
+            print("Invalid move!")
     return 0
 
 if __name__ == "__main__":
