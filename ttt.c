@@ -6,18 +6,18 @@
 void board_render(char board[3][4], char *board_ascii) {
     memset(board_ascii, 0, 18);
 //     board_ascii = ""
-//     board_ascii += "A "
-    strcat(board_ascii, "A ");
+//     board_ascii += "a "
+    strcat(board_ascii, "a ");
 //     board_ascii += ''.join(board[0])
     char *row_a = &board[0][0];
     strcat(board_ascii, row_a);
-//     board_ascii += "\nB "
-    strcat(board_ascii, "'\nB ");
+//     board_ascii += "\nb "
+    strcat(board_ascii, "'\nb ");
 //     board_ascii += ''.join(board[1])
     char *row_b = &board[1][0];
     strcat(board_ascii, row_b);
-//     board_ascii += "\nC "
-    strcat(board_ascii, "'\nC ");
+//     board_ascii += "\nc "
+    strcat(board_ascii, "'\nc ");
 //     board_ascii += ''.join(board[2])
     char *row_c = &board[2][0];
     strcat(board_ascii, row_c);
@@ -55,8 +55,8 @@ int main() {
         scanf("%s", &move);
 //         print(current_move+" chose", move)
         printf("\n%s chose %s\n", current_move, move);
-//         move_Y = ord(move[0])-65
-        char move_Y = move[0]-65;
+//         move_Y = ord(move[0])-97
+        char move_Y = move[0]-97;
 //         move_X = ord(move[1])-49
         char move_X = move[1]-49;
 //         print("Y:", move_Y)
