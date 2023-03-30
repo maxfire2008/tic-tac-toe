@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 // def player_won(player, board):
 int player_won(char player, char board[3][4])
@@ -157,6 +158,10 @@ void board_render(char board[3][4], char *board_ascii)
 // def main():
 int main()
 {
+    // system("cls||clear")
+    system("cls||clear");
+    // print("Tic Tac Toe!\n   By Max\n")
+    printf("Tic Tac Toe!\n   By Max\n\n");
     //     board = [
     //     [" ", " ", " "],
     //     [" ", " ", " "],
@@ -212,8 +217,12 @@ int main()
         //         move = input("")[:2]
         char move[2];
         scanf("%s", &move);
-        //         print(current_move+" chose", move)
-        printf("\033c");
+
+        // system("cls||clear")
+        system("cls||clear");
+        // print("Tic Tac Toe!\n   By Max\n")
+        printf("Tic Tac Toe!\n   By Max\n\n");
+
         //         move_Y = ord(move[0])-97
         char move_Y = move[0] - 97;
         //         move_X = ord(move[1])-49
@@ -249,5 +258,7 @@ int main()
         }
         //     return 0
     }
+    printf("Press Any Key to Exit\n");
+    getchar();
     return 0;
 }

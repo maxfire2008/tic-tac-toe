@@ -1,5 +1,8 @@
 #!python3
 
+from os import system
+
+
 def player_won(player, board):
     for y in range(3):
         if board[y][0] == player and board[y][1] == player and board[y][2] == player:
@@ -53,6 +56,8 @@ def board_render(board):
     return board_ascii
 
 def main():
+    system("cls||clear")
+    print("Tic Tac Toe!\n   By Max\n")
     board = [
         [" ", " ", " "],
         [" ", " ", " "],
@@ -74,7 +79,10 @@ def main():
 
         print(current_move+" move:", end="")
         move = input("")[:2]
-        print(current_move+" chose", move)
+
+        system("cls||clear")
+        print("Tic Tac Toe!\n   By Max\n")
+
         move_Y = ord(move[0])-97
         move_X = ord(move[1])-49
         print("Y:", move_Y)
