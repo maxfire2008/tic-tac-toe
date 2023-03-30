@@ -1,7 +1,10 @@
 # tic-tac-toe
 Assessment for my Computer Science class.
 
-Pseudocode:
+## Demo
+[![asciicast](https://asciinema.org/a/twcvIrNf43QOAhqbQg2HuiEQL.svg)](https://asciinema.org/a/twcvIrNf43QOAhqbQg2HuiEQL)
+
+## Pseudocode:
 ```
 current_user = X
 while True:
