@@ -4,7 +4,9 @@ Assessment for my Computer Science class.
 ## Demo
 [![asciicast](https://asciinema.org/a/twcvIrNf43QOAhqbQg2HuiEQL.svg)](https://asciinema.org/a/twcvIrNf43QOAhqbQg2HuiEQL)
 
-## Pseudocode:
+## [Download](https://github.com/maxfire2008/tic-tac-toe/releases/latest)
+
+## Pseudocode
 ```
 current_user = X
 while True:
