@@ -204,8 +204,7 @@ int main()
         // if player_winnable("X", " ", board) == 0 and player_winnable("O", " ", board) == 0:
         if (
             player_winnable("X"[0], " "[0], board) == 0 &&
-            player_winnable("O"[0], " "[0], board) == 0
-        )
+            player_winnable("O"[0], " "[0], board) == 0)
         {
             // print("Draw! How boring!")
             printf("Draw! How boring!\n");
@@ -258,7 +257,5 @@ int main()
         }
         //     return 0
     }
-    printf("Press Any Key to Exit\n");
-    getchar();
     return 0;
 }

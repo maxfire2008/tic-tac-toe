@@ -16,6 +16,7 @@ def player_won(player, board):
         return 1
     return 0
 
+
 def player_winnable(player, blank, board):
     for y in range(3):
         if (
@@ -45,6 +46,7 @@ def player_winnable(player, blank, board):
         return 1
     return 0
 
+
 def board_render(board):
     board_ascii = "  123\n"
     board_ascii += "a|"
@@ -54,6 +56,7 @@ def board_render(board):
     board_ascii += "\nc|"
     board_ascii += ''.join(board[2])
     return board_ascii
+
 
 def main():
     system("cls||clear")
@@ -96,6 +99,7 @@ def main():
         else:
             print("Invalid move!")
     return 0
+
 
 if __name__ == "__main__":
     quit(main())
