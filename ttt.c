@@ -53,6 +53,48 @@ int player_won(char player, char board[3][4]) {
     return 0;
 }
 
+// def player_winnable(player, board):
+int player_winnable(char player, char blank, char board[3][4]) {
+//     for y in range(3):
+    char y;
+    for (y = 0; y < 3; ++y) {
+//         if (
+        if (
+//             (board[y][0] == player or board[y][0] == " ") and
+            (board[y][0] == player || board[y][0] == blank) &&
+//             (board[y][1] == player or board[y][1] == " ") and
+            (board[y][1] == player || board[y][1] == blank) &&
+//             (board[y][2] == player or board[y][2] == " ")
+            (board[y][2] == player || board[y][2] == blank)
+//         ):
+        ) {
+//             return 1
+            return 1;
+        }
+    }
+//     for x in range(3):
+//         if (
+//             (board[0][x] == player or board[0][x] == " ") and
+//             (board[1][x] == player or board[1][x] == " ") and
+//             (board[2][x] == player or board[2][x] == " ")
+//         ):
+//             return 1
+//     if (
+//         (board[0][0] == player or board[0][0] == " ") and
+//         (board[1][1] == player or board[1][1] == " ") and
+//         (board[2][2] == player or board[2][2] == " ")
+//     ):
+//         return 1
+//     if (
+//         (board[0][2] == player or board[0][2] == " ") and
+//         (board[1][1] == player or board[1][1] == " ") and
+//         (board[2][0] == player or board[2][0] == " ")
+//     ):
+//         return 1
+//     return 0
+    return 0;
+}
+
 // def board_render(board):
 void board_render(char board[3][4], char *board_ascii) {
     memset(board_ascii, 0, 18);
@@ -115,12 +157,23 @@ int main() {
         //     break
             break;
         }
-        // if player_won(" ", board):
-        if (player_won(" "[0], board) == 0) {
-        //     print("Draw! What a boring game!\n:( :(")
-            printf("Draw! What a boring game!\n:( :(\n");
-        //     break
-            break;
+        // if player_winnable("X", board):
+        if (player_winnable("X"[0], board)) {
+        //     print("Player X can win!")
+            printf("Player X can win!\n");
+        // else:
+        } else {
+        //     print("Player X cannot win!")
+            printf("Player X cannot win!");
+        }
+        // if player_winnable("O", board):
+        if (player_winnable("O"[0], board)) {
+        //     print("Player O can win!")
+            printf("Player O can win!");
+        // else:
+        } else {
+        //     print("Player O cannot win!")
+            printf("Player O cannot win!");
         }
 //         print(current_move+" move:", end="")
         printf("%s move:", current_move);
