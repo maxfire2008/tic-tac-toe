@@ -1,8 +1,8 @@
 # tic-tac-toe
 
 ## Psuedocode
-[Original psuedocode](/psuedocode.txt)
-[Python Version](/ttt.py)
+- [Original psuedocode](/psuedocode.txt)
+- [Python Version](/ttt.py)
 
 ## Source
 [C source code](/ttt.c)
