@@ -71,7 +71,7 @@ int main() {
 //     while 1:
     while (1) {
 //         board_ascii = board_render(board)
-        char board_ascii[32];
+        char board_ascii[21];
         board_render(board, board_ascii);
 //         print(board_ascii)
         printf("%s\n\n", board_ascii);
