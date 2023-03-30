@@ -34,10 +34,10 @@ def main():
         board_ascii = board_render(board)
         print(board_ascii)
         if player_won("X", board):
-            print("Player X has won!")
+            print("Player X has won!\n🎊🎉🎊🎉🎊🎉")
             break
         if player_won("O", board):
-            print("Player O has won!")
+            print("Player O has won!\n🎊🎉🎊🎉🎊🎉")
             break
 
         print(current_move+" move:", end="")
