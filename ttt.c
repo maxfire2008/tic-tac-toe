@@ -115,6 +115,13 @@ int main() {
         //     break
             break;
         }
+        // if player_won(" ", board):
+        if (player_won(" "[0], board) == 0) {
+        //     print("Draw! What a boring game!\n:( :(")
+            printf("Draw! What a boring game!\n:( :(\n");
+        //     break
+            break;
+        }
 //         print(current_move+" move:", end="")
         printf("%s move:", current_move);
 //         move = input("")[:2]

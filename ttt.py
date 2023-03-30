@@ -39,6 +39,8 @@ def main():
         if player_won("O", board):
             print("Player O has won!\n🎊🎉🎊🎉🎊🎉")
             break
+        if player_won(" ", board):
+            print("Draw! What a boring game!\n:( :(")
 
         print(current_move+" move:", end="")
         move = input("")[:2]
