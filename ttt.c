@@ -213,7 +213,7 @@ int main()
         char move[2];
         scanf("%s", &move);
         //         print(current_move+" chose", move)
-        printf("\n%s chose %s\n", current_move, move);
+        printf("\033c");
         //         move_Y = ord(move[0])-97
         char move_Y = move[0] - 97;
         //         move_X = ord(move[1])-49
