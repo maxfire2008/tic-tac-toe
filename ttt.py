@@ -13,31 +13,31 @@ def player_won(player, board):
         return 1
     return 0
 
-def player_winnable(player, board):
+def player_winnable(player, blank, board):
     for y in range(3):
         if (
-            (board[y][0] == player or board[y][0] == " ") and
-            (board[y][1] == player or board[y][1] == " ") and
-            (board[y][2] == player or board[y][2] == " ")
+            (board[y][0] == player or board[y][0] == blank) and
+            (board[y][1] == player or board[y][1] == blank) and
+            (board[y][2] == player or board[y][2] == blank)
         ):
             return 1
     for x in range(3):
         if (
-            (board[0][x] == player or board[0][x] == " ") and
-            (board[1][x] == player or board[1][x] == " ") and
-            (board[2][x] == player or board[2][x] == " ")
+            (board[0][x] == player or board[0][x] == blank) and
+            (board[1][x] == player or board[1][x] == blank) and
+            (board[2][x] == player or board[2][x] == blank)
         ):
             return 1
     if (
-        (board[0][0] == player or board[0][0] == " ") and
-        (board[1][1] == player or board[1][1] == " ") and
-        (board[2][2] == player or board[2][2] == " ")
+        (board[0][0] == player or board[0][0] == blank) and
+        (board[1][1] == player or board[1][1] == blank) and
+        (board[2][2] == player or board[2][2] == blank)
     ):
         return 1
     if (
-        (board[0][2] == player or board[0][2] == " ") and
-        (board[1][1] == player or board[1][1] == " ") and
-        (board[2][0] == player or board[2][0] == " ")
+        (board[0][2] == player or board[0][2] == blank) and
+        (board[1][1] == player or board[1][1] == blank) and
+        (board[2][0] == player or board[2][0] == blank)
     ):
         return 1
     return 0
@@ -68,14 +68,9 @@ def main():
         if player_won("O", board):
             print("Player O has won!\n🎊🎉🎊🎉🎊🎉")
             break
-        if player_winnable("X", board):
-            print("Player X can win!")
-        else:
-            print("Player X cannot win!")
-        if player_winnable("O", board):
-            print("Player O can win!")
-        else:
-            print("Player O cannot win!")
+        if player_winnable("X", " ", board) == 0 and player_winnable("O", " ", board) == 0:
+            print("Draw! How boring!")
+            break
 
         print(current_move+" move:", end="")
         move = input("")[:2]
