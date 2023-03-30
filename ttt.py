@@ -36,8 +36,8 @@ def main():
         if player_won("X", board):
             print("Player X has won!")
             break
-        if player_won("Y", board):
-            print("Player Y has won!")
+        if player_won("O", board):
+            print("Player O has won!")
             break
 
         print(current_move+" move:", end="")
@@ -50,7 +50,7 @@ def main():
         if board[move_Y][move_X] == " ":
             board[move_Y][move_X] = current_move
             if current_move == "X":
-                current_move = "Y"
+                current_move = "O"
             else:
                 current_move = "X"
         else:

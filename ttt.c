@@ -5,25 +5,50 @@
 int player_won(char player, char board[3][4]) {
 //     for y in range(3):
     char y;
-    for (y = 1; y < 3; ++y) {
+    for (y = 0; y < 3; ++y) {
 //         if board[y][0] == player and board[y][1] == player and board[y][2] == player:
-        printf("\n==\n%s\n==\n", board[y]);
-//         if (
-//             strcmp(&board[y][0], &player) &&
-//             strcmp(&board[y][1], &player) &&
-//             strcmp(&board[y][2], &player)
-//         ) {
-// //             return 1
-//             return 1;
-//         }
+        // printf("b%d\n", board[y][0]);
+        // printf("p%d\n\n", player);
+        if (
+            board[y][0] == player &&
+            board[y][1] == player &&
+            board[y][2] == player
+        ) {
+//             return 1
+            return 1;
+        }
     }
 //     for x in range(3):
+    char x;
+    for (x = 0; x < 3; ++x) {
 //         if board[0][x] == player and board[1][x] == player and board[2][x] == player:
+        if (
+            board[0][x] == player &&
+            board[1][x] == player &&
+            board[2][x] == player
+        ) {
 //             return 1
+            return 1;
+        }
+    }
 //     if board[0][0] == player and board[1][1] == player and board[2][2] == player:
-//         return 1
+        if (
+            board[0][0] == player &&
+            board[1][1] == player &&
+            board[2][2] == player
+        ) {
+//             return 1
+            return 1;
+        }
 //     if board[0][2] == player and board[1][1] == player and board[2][0] == player:
-//         return 1
+        if (
+            board[0][2] == player &&
+            board[1][1] == player &&
+            board[2][0] == player
+        ) {
+//             return 1
+            return 1;
+        }
 //     return 0
     return 0;
 }
@@ -76,15 +101,20 @@ int main() {
 //         print(board_ascii)
         printf("%s\n\n", board_ascii);
         // if player_won("X", board):
-        if (player_won("X", board)) {
+
+        if (player_won("X"[0], board)) {
         //     print("Player X has won!")
-            printf("Player X has won!");
+            printf("Player X has won!\n🎊🎉🎊🎉🎊🎉\n");
+        //     break
             break;
-        //     break
         }
-        // if player_won("Y", board):
+        // if player_won("O", board):
+        if (player_won("O"[0], board)) {
         //     print("Player Y has won!")
+            printf("Player O has won!\n🎊🎉🎊🎉🎊🎉\n");
         //     break
+            break;
+        }
 //         print(current_move+" move:", end="")
         printf("%s move:", current_move);
 //         move = input("")[:2]
@@ -96,11 +126,11 @@ int main() {
         char move_Y = move[0]-97;
 //         move_X = ord(move[1])-49
         char move_X = move[1]-49;
-//         print("Y:", move_Y)
-        printf("Y: %d\n", move_Y);
-//         print("X:", move_X)
-        printf("X: %d\n", move_X);
-        printf("%d,%d is currently '%c'\n", move_Y, move_X, board[move_Y][move_X]);
+// //         print("Y:", move_Y)
+//         printf("Y: %d\n", move_Y);
+// //         print("X:", move_X)
+//         printf("X: %d\n", move_X);
+        // printf("%d,%d is currently '%c'\n", move_Y, move_X, board[move_Y][move_X]);
         // if board[move_Y][move_X] == " ":
         if (board[move_Y][move_X] == 32) {
 //             board[move_Y][move_X] = current_move
@@ -108,7 +138,7 @@ int main() {
 //             if current_move == "X":
             if (current_move == "X") {
 //                 current_move = "Y"
-                current_move = "Y";
+                current_move = "O";
             }
 //             else:
             else {
